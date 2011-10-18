@@ -1,3 +1,4 @@
 = silencer
 
-Description goes here
+A Redmine plugin to suppress email notifications (at will) when
+updating issues.
