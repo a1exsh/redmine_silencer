@@ -12,7 +12,8 @@ module RedmineSilencer
 
     def update_journal_notify(params, journal)
       if journal && params && params[:suppress_mail] == '1'
-        if User.current.allowed_to?(:suppress_mail_notifications, @project)
+        if User.current.allowed_to?(:suppress_mail_notifications,
+                                    journal.project)
           journal.notify = false
         else
           # what?
